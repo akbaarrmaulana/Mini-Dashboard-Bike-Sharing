@@ -26,7 +26,7 @@ hour.rename(columns={
 
 day.drop(labels='instant', axis=1, inplace=True)
 hour.drop(labels='instant', axis=1, inplace=True)
-day['date'] = pd.to_datetime(day['date'])
+day['date'] = pd.to_datetime(day['date'], format="%m/%d/%Y")
 hour['date'] = pd.to_datetime(hour['date'])
 
 type_col = ['season', 'holiday','weekday','workingday','weathersit']
