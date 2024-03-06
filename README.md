@@ -1,8 +1,12 @@
-# Mini-Dashboard-Bike-Sharing
-Mini Dashboard Bike Sharing
+# Bike Sharing Dashboard
+## Setup environment
+```
+conda activate main-ds
+pip install numpy pandas matplotlib seaborn jupyter streamlit babel datetime calendar
+```
 
-To run dashboard
-open dashboard.py
-
-run with this :
+## Run steamlit app
+```
 streamlit run dashboard.py
+```
+
