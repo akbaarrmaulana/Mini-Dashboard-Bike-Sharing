@@ -89,8 +89,8 @@ dm1 = day.groupby(['year','month']).agg({
     'count' : 'sum'
 }).reset_index()
 
-t2011 = dm1[dm1['year']==2011]
-t2012 = dm1[dm1['year']==2012]
+t2011 = dm1.query('year == 2011')
+t2012 = dm1.query('year == 2011')
 
 dd1 = day.groupby(['year','weekday']).agg({
     'casual': 'sum',
