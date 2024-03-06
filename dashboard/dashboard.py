@@ -89,6 +89,9 @@ dm1 = day.groupby(['year','month']).agg({
     'count' : 'sum'
 }).reset_index()
 
+t2011 = dm1[dm1['year']==2011]
+t2012 = dm1[dm1['year']==2012]
+
 dd1 = day.groupby(['year','weekday']).agg({
     'casual': 'sum',
     'registered': 'sum',
@@ -178,12 +181,12 @@ with tab1:
     
     with coll1:
         fig7,ax = plt.subplots(figsize=(10,7))
-        sns.lineplot(x='month', y=users, data=dm1[dm1['year']==2011])
+        sns.lineplot(x='month', y=users, data=t2011)
         plt.title('Count of Bike Sharing in 2011')
         st.pyplot(fig7)
     with coll2:
         fig8,ax = plt.subplots(figsize=(10,7))
-        sns.lineplot(x='month', y=users, data=dm1[dm1['year']==2012])
+        sns.lineplot(x='month', y=users, data=t2012)
         plt.title('Count of Bike Sharing in 2012')
         st.pyplot(fig8)
         
